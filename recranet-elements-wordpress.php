@@ -23,9 +23,14 @@ add_filter( 'wpseo_canonical', '__return_false' );
 function recranet_add_base_tag() {
     global $post;
 
-    if ( is_a( $post, 'WP_Post' ) &&
-        ( has_shortcode( $post->post_content, 'recranet_accommodations' ) || has_shortcode( $post->post_content, 'recranet_packages' ) ) ) {
+    // Add base tag to head for html5 mode
+    if ( is_a( $post, 'WP_Post' ) && !is_home() ) {
         echo '<base href="' . get_permalink() . '" />';
+    }
+
+    // If is page for posts (defined in WP Admin > Settings > Reading)
+    if ( is_home() ) {
+        echo '<base href="' . get_post_type_archive_link( 'post' ) . '" />';
     }
 }
 
