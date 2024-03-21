@@ -1,11 +1,15 @@
-=== Recranet Booking Template Redirect ===
-Requires at least: 4.5
-Tested up to: 5.5.3
-Requires PHP: 5.6
-Stable tag: 0.1.0
+=== Recranet Booking Elements ===
+Contributors: recranet
+Donate link: https://recranet.com/
+Requires at least: 5.0
+Tested up to: 5.3 
+Stable tag: 5.3
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Recranet Booking Elements Wordpress plugin.
+Recranet Booking Elements
 
 == Description ==
 
-Recranet Booking Elements Wordpress plugin.
+Integratie van Recranet Booking Elements, meer informatie:
+https://support.recranet.com/faq/website-integratie-elements-sdk/integratie-in-website
