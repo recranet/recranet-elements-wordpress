@@ -12,7 +12,7 @@ Recranet Booking Elements
 == Description ==
 
 Integratie van Recranet Booking Elements, meer informatie:
-https://support.recranet.com/faq/website-integratie-elements-sdk/integratie-in-website
+https://help.recranet.com/hc/nl/articles/5193568067997-Integratie-in-WordPress-website
 
 Belangrijk: Ga na installatie van de plugin naar _Instellingen -> Permalinks -> Permalink instellingen en selecteer (Jaar, maand, dag en naam) of (Jaar, maand en naam). Zet de onderstaande regels bovenaan het .htaccess bestand, boven # BEGIN WordPress, update de slug _reserveren_ en de _page_id_.
 
