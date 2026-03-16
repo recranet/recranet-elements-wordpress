@@ -7,7 +7,7 @@
  * Author URI:      https://help.recranet.com/
  * Text Domain:     recranet-elements-wordpress
  * Domain Path:     /languages
- * Version:         0.1.0
+ * Version:         0.2.0
  *
  * @package         Recranet_Elements_Wordpress
  */
@@ -35,6 +35,11 @@ function recranet_add_base_tag() {
 }
 
 add_action( 'wp_head', 'recranet_add_base_tag' );
+
+// Disable WordPress emoji detection script (uses Worker, OffscreenCanvas, sessionStorage which can
+// throw unhandled errors in Android WebView / Instagram in-app browser)
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
 
 // Add recranet accommodations shortcode
 function recranet_accommodations( $atts ) {
