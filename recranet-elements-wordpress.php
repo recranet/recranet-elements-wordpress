@@ -7,7 +7,7 @@
  * Author URI:      https://help.recranet.com/
  * Text Domain:     recranet-elements-wordpress
  * Domain Path:     /languages
- * Version:         0.2.0
+ * Version:         0.3.0
  *
  * @package         Recranet_Elements_Wordpress
  */
@@ -40,6 +40,12 @@ add_action( 'wp_head', 'recranet_add_base_tag' );
 // throw unhandled errors in Android WebView / Instagram in-app browser)
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+// Disable WordPress speculative loading / link prefetching (uses IntersectionObserver on scroll
+// which can throw unhandled errors in Android WebView / Instagram in-app browser)
+add_filter( 'wp_speculation_rules_configuration', '__return_empty_array' );
+remove_action( 'wp_footer', 'wp_print_speculation_rules', 10 );
+add_filter( 'plsr_speculation_rules', '__return_empty_array' );
 
 // Add recranet accommodations shortcode
 function recranet_accommodations( $atts ) {
