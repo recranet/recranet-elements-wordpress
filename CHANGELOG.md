@@ -10,7 +10,7 @@
 
 ### Fixed
 
-- **Disabled WordPress speculative loading / link prefetching.** The speculation rules script uses `IntersectionObserver` on scroll which can throw unhandled errors in Android WebView (Instagram in-app browser). Recranet's hosted pages do not include this script.
+- **Disabled WordPress speculative loading / link prefetching.** The speculation rules script uses `IntersectionObserver` on scroll which can throw unhandled errors in Android WebView (Instagram in-app browser). Recranet's hosted pages do not include this script. Speculative loading was introduced in WordPress 6.8.
 
 ## 0.2.0
 
